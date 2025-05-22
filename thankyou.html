@@ -2,71 +2,19 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terima Kasih</title>
+  <title>Terima Kasih!</title>
+  <!-- Tracking Event -->
+  <script>
+    fbq('track', 'Purchase', {currency: 'IDR', value: 149000});
+    ttq.track('CompletePayment');
+  </script>
   <style>
-    body { font-family: Arial, sans-serif; text-align: center; padding: 100px; }
-    h1 { color: green; }
+    body { font-family: sans-serif; text-align: center; padding-top: 50px; background: #f0fff0; }
+    h1 { color: #28a745; }
   </style>
-
-  <!-- Facebook Pixel -->
-  <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);
-    t.async=!0;t.src='https://connect.facebook.net/en_US/fbevents.js';
-    s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script');
-    fbq('init', '612806087911246');
-    fbq('track', 'Purchase', {value: 149000, currency: 'IDR'});
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=612806087911246&ev=Purchase&noscript=1"/></noscript>
-
-  <!-- TikTok Pixel -->
-  <script>
-    !function (w, d, t) {
-      w.TiktokAnalyticsObject = t;
-      var ttq = w[t] = w[t] || [];
-      ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie"];
-      ttq.setAndDefer = function (t, e) {
-        t[e] = function () {
-          t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
-        }
-      };
-      for (var i = 0; i < ttq.methods.length; i++) {
-        ttq.setAndDefer(ttq, ttq.methods[i]);
-      }
-      ttq.instance = function (t) {
-        var e = ttq._i[t] || [];
-        for (var n = 0; n < ttq.methods.length; n++) {
-          ttq.setAndDefer(e, ttq.methods[n]);
-        }
-        return e;
-      };
-      ttq.load = function (e, n) {
-        var i = "https://analytics.tiktok.com/i18n/pixel/events.js";
-        ttq._i = ttq._i || {};
-        ttq._i[e] = [];
-        ttq._i[e]._u = i;
-        ttq._t = ttq._t || {};
-        ttq._t[e] = +new Date();
-        ttq._o = ttq._o || {};
-        ttq._o[e] = n || {};
-        var o = document.createElement("script");
-        o.type = "text/javascript";
-        o.async = true;
-        o.src = i + "?sdkid=" + e + "&lib=" + t;
-        var a = document.getElementsByTagName("script")[0];
-        a.parentNode.insertBefore(o, a);
-      };
-      ttq.load('D0NDPRJC77U4QOI8K9MG');
-      ttq.page();
-      ttq.track('CompletePayment', {value: 149000, currency: 'IDR'});
-    }(window, document, 'ttq');
-  </script>
 </head>
 <body>
-  <h1>Terima Kasih!</h1>
-  <p>Pembayaran kamu sudah berhasil. Silakan cek email atau WhatsApp untuk akses kursusmu.</p>
+  <h1>Terima kasih telah membeli!</h1>
+  <p>Silakan cek email atau grup Telegram untuk akses produkmu.</p>
 </body>
 </html>

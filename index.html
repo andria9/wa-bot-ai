@@ -2,57 +2,30 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WhatsApp Bot AI - Preneur Mastery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WA Bot AI | Preneur Mastery</title>
 
-  <!-- Facebook Pixel -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '612806087911246');
-    fbq('track', 'PageView');
-  </script>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 
   <!-- TikTok Pixel -->
   <script>
     !function (w, d, t) {
       w.TiktokAnalyticsObject = t;
       var ttq = w[t] = w[t] || [];
-      ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie"];
-      ttq.setAndDefer = function (t, e) {
-        t[e] = function () {
-          t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
-        }
-      };
-      for (var i = 0; i < ttq.methods.length; i++) {
-        ttq.setAndDefer(ttq, ttq.methods[i])
-      }
+      ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie"],
+      ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } };
+      for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
       ttq.instance = function (t) {
         var e = ttq._i[t] || [];
-        for (var n = 0; n < ttq.methods.length; n++) {
-          ttq.setAndDefer(e, ttq.methods[n])
-        }
+        for (var n = 0; n < ttq.methods.length; n++) ttq.setAndDefer(e, ttq.methods[n]);
         return e
-      };
-      ttq.load = function (e, n) {
+      }, ttq.load = function (e, n) {
         var i = "https://analytics.tiktok.com/i18n/pixel/events.js";
-        ttq._i = ttq._i || {};
-        ttq._i[e] = [];
-        ttq._i[e]._u = i;
-        ttq._t = ttq._t || {};
-        ttq._t[e] = +new Date;
-        ttq._o = ttq._o || {};
+        ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = i, ttq._t = ttq._t || {}, ttq._t[e] = +new Date, ttq._o = ttq._o || {},
         ttq._o[e] = n || {};
         var o = document.createElement("script");
-        o.type = "text/javascript";
-        o.async = !0;
-        o.src = i + "?sdkid=" + e + "&lib=" + t;
+        o.type = "text/javascript", o.async = !0, o.src = i + "?sdkid=" + e + "&lib=" + t;
         var a = document.getElementsByTagName("script")[0];
         a.parentNode.insertBefore(o, a)
       };
@@ -61,92 +34,128 @@
     }(window, document, 'ttq');
   </script>
 
+  <!-- Facebook Pixel -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e); t.async = !0;
+      t.src = 'https://connect.facebook.net/en_US/fbevents.js';
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script');
+    fbq('init', '612806087911246');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=612806087911246&ev=PageView&noscript=1"/></noscript>
+
   <style>
     body {
       font-family: sans-serif;
       margin: 0;
       padding: 0;
       background: #f9f9f9;
+      color: #222;
     }
     .container {
       max-width: 600px;
       margin: auto;
       padding: 20px;
-      background: white;
+      background: #fff;
+    }
+    .swiper-slide img {
+      width: 100%;
+      border-radius: 12px;
     }
     h1 {
-      font-size: 20px;
-      margin-bottom: 10px;
+      font-size: 22px;
+      margin-top: 20px;
     }
     .price {
-      color: red;
       font-size: 18px;
-    }
-    .desc {
       margin: 10px 0;
-      line-height: 1.5;
     }
-    .btn {
-      background-color: #ff4d00;
-      color: white;
-      padding: 15px;
+    .price del {
+      color: grey;
+      margin-right: 10px;
+    }
+    ul {
+      padding-left: 18px;
+    }
+    .cta {
+      margin-top: 25px;
       text-align: center;
-      border: none;
-      border-radius: 10px;
-      font-size: 16px;
-      margin-top: 20px;
-      cursor: pointer;
-      display: block;
-      width: 100%;
-      text-decoration: none;
     }
-    .slider img {
-      width: 100%;
-      margin-bottom: 10px;
-      border-radius: 10px;
+    .cta a {
+      background: #2d8cff;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 16px;
+      text-decoration: none;
+      display: inline-block;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="slider">
-      <img src="https://res.cloudinary.com/dizjo8vzg/image/upload/v1747910090/1_20250522_142623_0000_wg3zld.png" alt="1" />
-      <img src="https://res.cloudinary.com/dizjo8vzg/image/upload/v1747910087/2_20250522_142623_0001_ckn7cn.png" alt="2" />
-      <img src="https://res.cloudinary.com/dizjo8vzg/image/upload/v1747910091/3_20250522_142623_0002_s8y7re.png" alt="3" />
-      <img src="https://res.cloudinary.com/dizjo8vzg/image/upload/v1747910091/4_20250522_142623_0003_e66fdj.png" alt="4" />
-      <img src="https://res.cloudinary.com/dizjo8vzg/image/upload/v1747910086/5_20250522_142623_0004_t4quw1.png" alt="5" />
-      <img src="https://res.cloudinary.com/dizjo8vzg/image/upload/v1747910086/6_20250522_145005_0005_m1nz7e.png" alt="6" />
+    <!-- Carousel -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://res.cloudinary.com/dizjo8vzg/image/upload/v1747910090/1_20250522_142623_0000_wg3zld.png" alt=""></div>
+        <div class="swiper-slide"><img src="https://res.cloudinary.com/dizjo8vzg/image/upload/v1747910087/2_20250522_142623_0001_ckn7cn.png" alt=""></div>
+        <div class="swiper-slide"><img src="https://res.cloudinary.com/dizjo8vzg/image/upload/v1747910091/3_20250522_142623_0002_s8y7re.png" alt=""></div>
+        <div class="swiper-slide"><img src="https://res.cloudinary.com/dizjo8vzg/image/upload/v1747910091/4_20250522_142623_0003_e66fdj.png" alt=""></div>
+        <div class="swiper-slide"><img src="https://res.cloudinary.com/dizjo8vzg/image/upload/v1747910086/5_20250522_142623_0004_t4quw1.png" alt=""></div>
+        <div class="swiper-slide"><img src="https://res.cloudinary.com/dizjo8vzg/image/upload/v1747910086/6_20250522_145005_0005_m1nz7e.png" alt=""></div>
+      </div>
     </div>
 
+    <!-- Content -->
     <h1>Bikin WhatsApp Bot AI Sendiri: Balas Otomatis dengan ChatGPT atau Deepseek</h1>
-    <div class="price"><del>IDR 250,000</del> → IDR 149,000</div>
+    <div class="price">
+      <del>IDR 250,000</del><strong>IDR 149,000</strong>
+    </div>
+    <p>Bukan BOT biasa yang balasannya sudah disetting dan selalu sama, balasan Bot AI bervariasi tergantung konteks. Pengerjaan mudah tinggal copas, hanya 15 menit, penggunaan selamanya.</p>
 
-    <p class="desc">
-      Bukan BOT biasa yang balasannya sudah disetting dan akan selalu sama. Bot AI akan menjawab berbeda-beda sesuai konteks pengguna.<br><br>
-      Pengerjaan mudah tinggal copas, hanya 15 menit. Penggunaan selamanya.
-    </p>
-    <p class="desc">
-      <strong>Modul Video:</strong>
-      <ul>
-        <li>Intro & Demo Bot AI</li>
-        <li>Setup Node Code (Scan WA Bisnis via barcode)</li>
-        <li>Integrasi Make.com untuk AI & konteks chat</li>
-        <li>Simpan history chat ke Firestore</li>
-        <li>Kirim balasan AI ke pengguna</li>
-        <li>Tes & Monitoring</li>
-      </ul>
-    </p>
-    <p class="desc">
-      <strong>Bonus:</strong>
-      <ul>
-        <li>Template kode siap pakai</li>
-        <li>Link tools gratis</li>
-        <li>Tips scaling & keamanan</li>
-        <li>Grup Telegram support</li>
-      </ul>
-    </p>
+    <p>Struktur Modul dalam bentuk video yang didapat:</p>
+    <ul>
+      <li>Intro & Demo Bot AI</li>
+      <li>Setup Node Code (Scan WA Bisnis Via barcode)</li>
+      <li>Skenario Make.com balas AI sesuai Prompt dan konteks</li>
+      <li>Simpan history chat ke Firestore</li>
+      <li>Kirim balasan AI ke pengguna</li>
+      <li>Tes dan Monitoring</li>
+    </ul>
 
-    <a href="https://app.midtrans.com/payment-links/1747913878581" class="btn" onclick="fbq('track', 'InitiateCheckout'); ttq.track('InitiateCheckout');">Beli Sekarang</a>
+    <p><strong>Bonus:</strong></p>
+    <ul>
+      <li>Template kode siap pakai</li>
+      <li>Link tools gratis</li>
+      <li>Tips scaling & keamanan</li>
+      <li>Grup Telegram support</li>
+    </ul>
+
+    <div class="cta">
+      <a href="https://app.midtrans.com/payment-links/1747913878581" target="_blank">Beli Sekarang</a>
+    </div>
   </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      }
+    });
+  </script>
 </body>
 </html>

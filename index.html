@@ -47,20 +47,22 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     .btn { display: inline-block; padding: 15px 25px; background: #28a745; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; }
     .swiper { width: 100%; height: auto; margin-bottom: 20px; }
     .swiper-slide img { width: 100%; border-radius: 12px; }
-    .wa-button {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    background-color: #25D366;
-    color: white;
-    text-align: center;
-    padding: 16px 0;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    z-index: 9999;
-  }
+    .floating-btn {
+  position: fixed;
+  bottom: 20px; /* agak naik dari bawah */
+  left: 0;
+  width: 100vw;
+  background-color: #25D366;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px 10px 0 0; /* sudut atas melingkar */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
   </style>
 </head>
 <body>
@@ -100,7 +102,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
       Grup Telegram support
     </p>
 
-    <a href="redirect.html" class="wa-button">Chat Dengan CS AI</a>
+    <a href="redirect.html" class="floating-btn">Chat Dengan CS AI</a>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

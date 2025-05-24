@@ -2,117 +2,179 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>WA Bot AI</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bot WhatsApp AI Otomatis</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding-bottom: 70px;
+      line-height: 1.6;
+    }
+    header {
+      background: #111;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 16px;
+      color: #ccc;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+    .slideshow img {
+      width: 100%;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
+    .video-container {
+      position: relative;
+      padding-top: 56.25%;
+      margin: 30px 0;
+    }
+    .video-container video {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border-radius: 10px;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #111;
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .faq h3 {
+      margin-top: 15px;
+    }
+    .cta-button-fixed {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #28a745;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      z-index: 9999;
+    }
+    .cta-button-fixed:hover {
+      background: #218838;
+    }
+  </style>
+</head>
+<body>
 
-  <!-- Facebook Pixel -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src='https://connect.facebook.net/en_US/fbevents.js';
-    s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script');
-    fbq('init', '612806087911246');
-    fbq('track', 'PageView');
-  </script>
+<!-- Facebook Pixel -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src='https://connect.facebook.net/en_US/fbevents.js';
+  s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script');
+  fbq('init', '612806087911246');
+  fbq('track', 'PageView');
+</script>
 
-  <!-- TikTok Pixel Code Start -->
+<!-- TikTok Pixel -->
 <script>
 !function (w, d, t) {
-  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
-var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
-;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
-
-
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];
+  ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"];
+  ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};
+  for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);
+  ttq.load=function(e,n){
+    var r="https://analytics.tiktok.com/i18n/pixel/events.js";
+    var s=document.createElement("script");
+    s.type="text/javascript";s.async=!0;
+    s.src=r+"?sdkid="+e+"&lib="+t;
+    var f=document.getElementsByTagName("script")[0];
+    f.parentNode.insertBefore(s,f)
+  };
   ttq.load('D0NDPRJC77U4QOI8K9MG');
   ttq.page();
 }(window, document, 'ttq');
 </script>
-<!-- TikTok Pixel Code End -->
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-  <style>
-    body { font-family: sans-serif; padding: 0; margin: 0; background: #f7f7f7; }
-    .container {
-  max-width: 600px;
-  margin: auto;
-  padding: 20px;
-  padding-bottom: 100px; /* tambahkan ruang bawah */
-  background: white;
-}
-    .price { font-size: 24px; color: red; }
-    .btn { display: inline-block; padding: 15px 25px; background: #28a745; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; }
-    .swiper { width: 100%; height: auto; margin-bottom: 20px; }
-    .swiper-slide img { width: 100%; border-radius: 12px; }
-    .floating-btn {
-  position: fixed;
-  bottom: 20px;
-  left: 10px;
-  right: 10px;
-  background-color: #25D366;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 10px;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
-  z-index: 999;
-}
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="https://res.cloudinary.com/dizjo8vzg/image/upload/v1747910090/1_20250522_142623_0000_wg3zld.png" /></div>
-        <div class="swiper-slide"><img src="https://res.cloudinary.com/dizjo8vzg/image/upload/v1747910087/2_20250522_142623_0001_ckn7cn.png" /></div>
-        <div class="swiper-slide"><img src="https://res.cloudinary.com/dizjo8vzg/image/upload/v1747910091/3_20250522_142623_0002_s8y7re.png" /></div>
-        <div class="swiper-slide"><img src="https://res.cloudinary.com/dizjo8vzg/image/upload/v1747910091/4_20250522_142623_0003_e66fdj.png" /></div>
-        <div class="swiper-slide"><img src="https://res.cloudinary.com/dizjo8vzg/image/upload/v1747910086/5_20250522_142623_0004_t4quw1.png" /></div>
-      </div>
-    </div>
+<header>
+  <h1>Bot WhatsApp Otomatis yang Closingkan Pelanggan Tanpa CS</h1>
+  <p>Aktif 24 Jam, Tanpa Coding, Langsung Jalan Hari Ini Juga</p>
+</header>
 
-    <h2>Bikin WhatsApp Bot AI Sendiri: Balas Otomatis dengan ChatGPT atau Deepseek</h2>
+<div class="container">
 
-    <p><strong>DESCRIPTION</strong><br>
-      Bukan BOT biasa yang balasanya sudah diseting dan akan selalu sama. Balasan Bot AI bervariatif dan akan berbeda ke setiap pengguna, tergantung konteks, jika digunakan untuk CS jualan, AI-nya akan ngerti product knowledge dan SOP perusahaanmu, berjalan 24 jam.
-      <br><br>
-      1 Bot untuk 1 akun whatsapp, tapi kamu bisa bikin berapapun jumlah bot nya. Pengerjaan mudah tinggal copas, hanya 15 menit, penggunaan selamanya.
-    </p>
-
-    <ul>
-      <li>Intro & Demo Bot AI</li>
-      <li>Setup Node Code (Scan WA Bisnis Via barcode, kirim pesan masuk ke make.com)</li>
-      <li>Skenario make.com untuk mendapatkan balasan AI sesuai Prompt dan konteks chat per pengguna</li>
-      <li>Simpan history chat ke google firestore</li>
-      <li>Kirim balasan AI ke pengguna</li>
-      <li>Tes dan Monitoring</li>
-    </ul>
-
-    <p><strong>Bonus:</strong><br>
-      Template kode siap pakai<br>
-      Link ke tools/tools gratis<br>
-      Tips scaling & keamanan<br>
-      Grup Telegram support
-    </p>
-
-    <a href="redirect.html" class="floating-btn">Chat Dengan CS AI Untuk Info Pembuatan</a>
+  <div class="slideshow">
+    <img src="slide 1.png" alt="Slide 1">
+    <img src="slide 2.png" alt="Slide 2">
+    <img src="slide 3.png" alt="Slide 3">
+    <img src="slide 4.png" alt="Slide 4">
+    <img src="slide 5.png" alt="Slide 5">
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    new Swiper('.swiper', {
-      loop: true,
-      autoplay: { delay: 2500 },
-    });
-  </script>
-  <script>
-  fetch('https://counterapi.dev/api/wa-bot-ai-index')
-</script>
+  <div class="video-container">
+    <video src="video-demo.mp4" controls poster="slide1.jpg"></video>
+  </div>
+
+  <div class="section">
+    <h2>Kenapa Harus Pakai Bot Ini?</h2>
+    <p>
+      Mengandalkan CS manusia = biaya mahal & kecepatan lambat. Layanan chatbot profesional? Mulai dari 1 juta per bulan.  
+      Bot ini? Sekali setup — langsung bisa bantu balas WA pelanggan 24 jam nonstop, kirim katalog otomatis, hingga bantu closing.  
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Keuntungan Menggunakan Bot WhatsApp AI Ini</h2>
+    <ul>
+      <li>Chat balasan instan ke semua calon pelanggan</li>
+      <li>Responsif 24 jam tanpa perlu tidur</li>
+      <li>Tampilan natural seperti manusia (bukan robot kaku)</li>
+      <li>Bisa langsung dihubungkan ke akun WhatsApp aktif kamu</li>
+      <li>Mudah diatur via tampilan web, tanpa install aplikasi tambahan</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Penawaran Spesial Hari Ini</h2>
+    <p>
+      Dapatkan akses setup bot dan panduan penggunaannya secara lengkap.  
+      <strong>Tanpa biaya bulanan</strong> — cukup bayar 1x untuk langsung mulai.  
+      Bonus: template skrip jawaban siap pakai dan dukungan setup awal.
+    </p>
+  </div>
+
+  <div class="section faq">
+    <h2>Pertanyaan yang Sering Ditanyakan</h2>
+    <h3>Apakah butuh coding?</h3>
+    <p>Tidak. Semuanya sudah kami siapkan. Cukup ikuti langkahnya dan langsung aktif.</p>
+    <h3>Bisa untuk semua jenis usaha?</h3>
+    <p>Ya. Selama kamu menggunakan WhatsApp untuk jualan atau pelayanan, ini cocok.</p>
+    <h3>Aman gak?</h3>
+    <p>Aman karena bot berjalan melalui server pribadi dan nomor WA resmi kamu sendiri.</p>
+  </div>
+
+</div>
+
+<a href="redirect.html" class="cta-button-fixed">Aktifkan Bot Sekarang</a>
+
 </body>
 </html>

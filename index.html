@@ -4,97 +4,114 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bot WhatsApp AI Otomatis</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
   <style>
     body {
       font-family: sans-serif;
       margin: 0;
-      padding-bottom: 70px;
+      padding-bottom: 100px; /* ruang bawah untuk CTA */
       line-height: 1.6;
     }
+
     header {
       background: #111;
       color: white;
       padding: 40px 20px;
       text-align: center;
     }
+
     header h1 {
       font-size: 26px;
       margin-bottom: 10px;
     }
+
     header p {
       font-size: 16px;
       color: #ccc;
     }
+
     .container {
       max-width: 800px;
       margin: auto;
       padding: 20px;
     }
-    .slideshow img {
+
+    .swiper {
       width: 100%;
-      margin-bottom: 10px;
-      border-radius: 10px;
+      max-width: 500px;
+      margin: 20px auto;
     }
+
+    .swiper-wrapper {
+      display: flex;
+    }
+
+    .swiper-slide {
+      flex-shrink: 0;
+      width: 100%;
+      height: auto;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
     .video-container {
       position: relative;
       padding-top: 56.25%;
       margin: 30px 0;
     }
+
     .video-container video {
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
       border-radius: 10px;
     }
+
     .section {
-      margin-bottom: 40px;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      padding: 0 20px;
     }
+
     h2 {
       color: #111;
       font-size: 22px;
       margin-bottom: 15px;
     }
+
     ul {
       padding-left: 20px;
     }
+
     .faq h3 {
       margin-top: 15px;
     }
+
     .cta-button-fixed {
       position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
       background: #28a745;
       color: white;
       text-align: center;
-      padding: 15px;
-      font-size: 18px;
-      font-weight: bold;
+      padding: 12px 24px;
+      font-size: 14px;
+      font-weight: 600;
       text-decoration: none;
       z-index: 9999;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      max-width: 90%;
+      line-height: 1.4;
     }
-    .cta-button-fixed {
-  position: fixed;
-  bottom: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #28a745;
-  color: white;
-  text-align: center;
-  padding: 10px 20px;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  z-index: 9999;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  max-width: 90%;
-  line-height: 1.4;
-}
   </style>
-  <!-- Swiper CSS -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
 
@@ -106,7 +123,7 @@
   if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
   n.queue=[];t=b.createElement(e);t.async=!0;
   t.src='https://connect.facebook.net/en_US/fbevents.js';
-  s=b.getElementsByTagName(e)[0];
+  s=b.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(t,s)}(window, document,'script');
   fbq('init', '612806087911246');
   fbq('track', 'PageView');
@@ -137,77 +154,71 @@
   <p>Aktif 24 Jam, Tanpa Coding, Langsung Jalan Hari Ini Juga</p>
 </header>
 
-<div class="swiper mySwiper" style="width: 100%; max-width: 500px;">
+<!-- Carousel -->
+<div class="swiper mySwiper">
   <div class="swiper-wrapper">
-    <div class="swiper-slide">
-      <img src="img/slide 1.png" style="width:100%;" />
-    </div>
-    <div class="swiper-slide">
-      <img src="img/slide 2.png" style="width:100%;" />
-    </div>
-    <div class="swiper-slide">
-      <img src="img/slide 3.png" style="width:100%;" />
-    </div>
-    <div class="swiper-slide">
-      <img src="img/slide 4.png" style="width:100%;" />
-    </div>
-    <div class="swiper-slide">
-      <img src="img/slide 5.png" style="width:100%;" />
-    </div>
-    <!-- Tambah slide sesuai kebutuhan -->
+    <div class="swiper-slide"><img src="img/slide 1.png" alt="Slide 1"></div>
+    <div class="swiper-slide"><img src="img/slide 2.png" alt="Slide 2"></div>
+    <div class="swiper-slide"><img src="img/slide 3.png" alt="Slide 3"></div>
+    <div class="swiper-slide"><img src="img/slide 4.png" alt="Slide 4"></div>
+    <div class="swiper-slide"><img src="img/slide 5.png" alt="Slide 5"></div>
   </div>
   <div class="swiper-pagination"></div>
 </div>
 
-  <div class="video-container">
-    <video src="video-demo.mp4" controls poster="slide1.jpg"></video>
-  </div>
-
-  <div class="section">
-    <h2>Kenapa Harus Pakai Bot Ini?</h2>
-    <p>
-      Mengandalkan CS manusia = biaya mahal & kecepatan lambat. Layanan chatbot profesional? Mulai dari 1 juta per bulan.  
-      Bot ini? Sekali setup — langsung bisa bantu balas WA pelanggan 24 jam nonstop, kirim katalog otomatis, hingga bantu closing.  
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>Keuntungan Menggunakan Bot WhatsApp AI Ini</h2>
-    <ul>
-      <li>Chat balasan instan ke semua calon pelanggan</li>
-      <li>Responsif 24 jam tanpa perlu tidur</li>
-      <li>Tampilan natural seperti manusia (bukan robot kaku)</li>
-      <li>Bisa langsung dihubungkan ke akun WhatsApp aktif kamu</li>
-      <li>Mudah diatur via tampilan web, tanpa install aplikasi tambahan</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Penawaran Spesial Hari Ini</h2>
-    <p>
-      Dapatkan akses setup bot dan panduan penggunaannya secara lengkap.  
-      <strong>Tanpa biaya bulanan</strong> — cukup bayar 1x untuk langsung mulai.  
-      Bonus: template skrip jawaban siap pakai dan dukungan setup awal.
-    </p>
-  </div>
-
-  <div class="section faq">
-    <h2>Pertanyaan yang Sering Ditanyakan</h2>
-    <h3>Apakah butuh coding?</h3>
-    <p>Tidak. Semuanya sudah kami siapkan. Cukup ikuti langkahnya dan langsung aktif.</p>
-    <h3>Bisa untuk semua jenis usaha?</h3>
-    <p>Ya. Selama kamu menggunakan WhatsApp untuk jualan atau pelayanan, ini cocok.</p>
-    <h3>Aman gak?</h3>
-    <p>Aman karena bot berjalan melalui server pribadi dan nomor WA resmi kamu sendiri.</p>
-  </div>
-
+<!-- Video -->
+<div class="video-container">
+  <video src="video-demo.mp4" controls poster="slide1.jpg"></video>
 </div>
 
+<!-- Section: Why -->
+<div class="section">
+  <h2>Kenapa Harus Pakai Bot Ini?</h2>
+  <p>
+    Mengandalkan CS manusia = biaya mahal & kecepatan lambat.  
+    Layanan chatbot profesional? Mulai dari 1 juta per bulan.  
+    Bot ini? Sekali setup — langsung bisa bantu balas WA pelanggan 24 jam nonstop, kirim katalog otomatis, hingga bantu closing.  
+  </p>
+</div>
+
+<!-- Section: Benefits -->
+<div class="section">
+  <h2>Keuntungan Menggunakan Bot WhatsApp AI Ini</h2>
+  <ul>
+    <li>Chat balasan instan ke semua calon pelanggan</li>
+    <li>Responsif 24 jam tanpa perlu tidur</li>
+    <li>Tampilan natural seperti manusia (bukan robot kaku)</li>
+    <li>Bisa langsung dihubungkan ke akun WhatsApp aktif kamu</li>
+    <li>Mudah diatur via tampilan web, tanpa install aplikasi tambahan</li>
+  </ul>
+</div>
+
+<!-- Section: Offer -->
+<div class="section">
+  <h2>Penawaran Spesial Hari Ini</h2>
+  <p>
+    Dapatkan akses setup bot dan panduan penggunaannya secara lengkap.  
+    <strong>Tanpa biaya bulanan</strong> — cukup bayar 1x untuk langsung mulai.  
+    Bonus: template skrip jawaban siap pakai dan dukungan setup awal.
+  </p>
+</div>
+
+<!-- Section: FAQ -->
+<div class="section faq">
+  <h2>Pertanyaan yang Sering Ditanyakan</h2>
+  <h3>Apakah butuh coding?</h3>
+  <p>Tidak. Semuanya sudah kami siapkan. Cukup ikuti langkahnya dan langsung aktif.</p>
+  <h3>Bisa untuk semua jenis usaha?</h3>
+  <p>Ya. Selama kamu menggunakan WhatsApp untuk jualan atau pelayanan, ini cocok.</p>
+  <h3>Aman gak?</h3>
+  <p>Aman karena bot berjalan melalui server pribadi dan nomor WA resmi kamu sendiri.</p>
+</div>
+
+<!-- CTA Button -->
 <a href="redirect.html" class="cta-button-fixed">Chat Dengan CS AI Untuk Info Pembuatan</a>
 
-  <!-- Swiper JS -->
+<!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
 <script>
   var swiper = new Swiper(".mySwiper", {
     loop: true,
@@ -220,5 +231,6 @@
     },
   });
 </script>
+
 </body>
 </html>

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thank You</title>
+  <title>Terima Kasih</title>
 
-  <!-- Meta Pixel Code -->
+  <!-- Facebook Meta Pixel -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -21,11 +21,12 @@
       currency: 'IDR'
     });
   </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=612806087911246&ev=Purchase&noscript=1"
-  /></noscript>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=612806087911246&ev=Purchase&noscript=1"/>
+  </noscript>
 
-  <!-- TikTok Pixel Code -->
+  <!-- TikTok Pixel -->
   <script>
     !function (w, d, t) {
       w.TiktokAnalyticsObject = t;
@@ -69,12 +70,53 @@
       });
     }(window, document, 'ttq');
   </script>
+
+  <!-- Styling -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #333;
+    }
+    p {
+      font-size: 18px;
+      color: #555;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
+
 <body>
   <h1>Terima kasih telah membeli!</h1>
-  <p>Silakan cek link berikut untuk akses produkmu. https://drive.google.com/drive/folders/1iJWApqiaqZ5CqoRb3FAM7qylxQ0Z86ED</p>
+  <p>Silakan cek link berikut untuk akses produkmu:<br />
+    <a href="https://drive.google.com/drive/folders/1iJWApqiaqZ5CqoRb3FAM7qylxQ0Z86ED" target="_blank">
+      Klik di sini untuk akses produk
+    </a>
+  </p>
+
+  <noscript>
+    <p><strong>Catatan:</strong> Jika link tidak muncul, kamu bisa buka langsung:<br />
+      <a href="https://drive.google.com/drive/folders/1iJWApqiaqZ5CqoRb3FAM7qylxQ0Z86ED" target="_blank">
+        https://drive.google.com/drive/folders/1iJWApqiaqZ5CqoRb3FAM7qylxQ0Z86ED
+      </a>
+    </p>
+  </noscript>
+
   <script>
-  fetch('https://counterapi.dev/api/wa-bot-ai-thankyou')
-</script>
+    fetch('https://counterapi.dev/api/wa-bot-ai-thankyou')
+      .then(res => res.json())
+      .then(data => console.log('Counter updated:', data))
+      .catch(err => console.error('Counter error:', err));
+  </script>
 </body>
 </html>

@@ -12,6 +12,7 @@
       margin: 0;
       padding-bottom: 80px;
       line-height: 1.6;
+      background: #f9f9f9;
     }
     header {
       background: #111;
@@ -31,6 +32,7 @@
       max-width: 800px;
       margin: auto;
       padding: 20px;
+      background: white;
     }
     .slideshow img {
       width: 100%;
@@ -40,8 +42,7 @@
     .swiper {
       width: 100%;
       max-width: 500px;
-      margin: auto;
-      margin-top: 20px;
+      margin: 20px auto;
     }
     .swiper-slide img {
       width: 100%;
@@ -73,23 +74,23 @@
       margin-top: 15px;
     }
     .cta-button-fixed {
-  position: fixed;
-  bottom: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #28a745;
-  color: white;
-  text-align: center;
-  padding: 12px 0;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  z-index: 9999;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  max-width: 90%;
-  line-height: 1.4;
-}
+      position: fixed;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #28a745;
+      color: white;
+      text-align: center;
+      padding: 12px 24px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      z-index: 9999;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      max-width: 90%;
+      line-height: 1.4;
+    }
   </style>
 </head>
 <body>
@@ -135,11 +136,11 @@
 
 <div class="swiper mySwiper">
   <div class="swiper-wrapper">
-    <div class="swiper-slide"><img src="slide 1.png" alt="Slide 1"></div>
-    <div class="swiper-slide"><img src="slide 2.png" alt="Slide 2"></div>
-    <div class="swiper-slide"><img src="slide 3.png" alt="Slide 3"></div>
-    <div class="swiper-slide"><img src="slide 4.png" alt="Slide 4"></div>
-    <div class="swiper-slide"><img src="slide 5.png" alt="Slide 5"></div>
+    <div class="swiper-slide"><img src="slide 1.png" alt="Demo tampilan chatbot AI - slide 1"></div>
+    <div class="swiper-slide"><img src="slide 2.png" alt="Cara kerja bot WhatsApp - slide 2"></div>
+    <div class="swiper-slide"><img src="slide 3.png" alt="Fitur balasan otomatis - slide 3"></div>
+    <div class="swiper-slide"><img src="slide 4.png" alt="Tampilan seperti CS manusia - slide 4"></div>
+    <div class="swiper-slide"><img src="slide 5.png" alt="Integrasi langsung dengan WhatsApp - slide 5"></div>
   </div>
   <div class="swiper-pagination"></div>
 </div>
@@ -152,29 +153,30 @@
   <div class="section">
     <h2>Kenapa Harus Pakai Bot Ini?</h2>
     <p>
-      Mengandalkan CS manusia = biaya mahal & kecepatan lambat. Layanan chatbot profesional? Mulai dari 1 juta per bulan.  
-      Bot ini? Sekali setup — langsung bisa bantu balas WA pelanggan 24 jam nonstop, kirim katalog otomatis, hingga bantu closing.  
+      Mengandalkan CS manusia = biaya mahal & kecepatan lambat.<br>
+      Layanan chatbot profesional? Mulai dari 1 juta per bulan.<br>
+      Bot ini? Sekali setup — langsung bisa bantu balas WA pelanggan 24 jam nonstop, kirim katalog otomatis, hingga bantu closing.
     </p>
   </div>
 
   <div class="section">
     <h2>Keuntungan Menggunakan Bot WhatsApp AI Ini</h2>
     <ul>
-      <li>Chat balasan instan ke semua calon pelanggan</li>
+      <li>Balasan instan ke semua calon pelanggan</li>
       <li>Responsif 24 jam tanpa perlu tidur</li>
       <li>Tampilan natural seperti manusia (bukan robot kaku)</li>
-      <li>Bisa langsung dihubungkan ke akun WhatsApp aktif kamu</li>
+      <li>Langsung terhubung ke akun WhatsApp aktif kamu</li>
       <li>Mudah diatur via tampilan web, tanpa install aplikasi tambahan</li>
       <li>Support Follow Up Otomatis Beberapa Tahap</li>
-      <li>Support Kirim Gambar Langsung</li>
+      <li>Support Deteksi dan Kirim Gambar Langsung</li>
     </ul>
   </div>
 
   <div class="section">
     <h2>Penawaran Spesial Hari Ini</h2>
     <p>
-      Dapatkan akses setup bot dan panduan penggunaannya secara lengkap.  
-      <strong>Tanpa biaya bulanan</strong> — cukup bayar 1x untuk langsung mulai.  
+      Dapatkan akses setup bot dan panduan penggunaannya secara lengkap.<br>
+      <strong>Tanpa biaya bulanan</strong> — cukup bayar 1x untuk langsung mulai.<br>
       Bonus: template skrip jawaban siap pakai dan dukungan setup awal.
     </p>
   </div>
@@ -190,7 +192,7 @@
   </div>
 </div>
 
-<a href="redirect.html" class="cta-button-fixed">Chat Dengan CS AI Untuk Info Pembuatan</a>
+<a href="redirect.html" class="cta-button-fixed">⬆️ Chat Sekarang & Aktifkan Bot AI-mu!</a>
 
 <!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -199,6 +201,7 @@
     loop: true,
     autoplay: {
       delay: 3000,
+      disableOnInteraction: false,
     },
     pagination: {
       el: ".swiper-pagination",
